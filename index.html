@@ -47,8 +47,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
-      padding: 0.9rem 4vw 1rem;
+      gap: 0.75rem;
+      padding: 0.8rem 2vw 1rem;
       background: rgba(3,11,24,0.95);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
@@ -61,22 +61,22 @@
       align-items: center;
     }
 
-    /* الهيدر الكبير */
+    /* اللوجو فوق بعرض الصفحة */
     .logo-full {
       width: 100%;
-      max-width: 1280px;
-      min-height: 120px;
+      max-width: 1400px;
+      min-height: 118px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.4rem 0;
-      background: linear-gradient(180deg, rgba(7,21,45,0.55), rgba(3,11,24,0.2));
-      border-radius: 16px;
+      padding: 0.2rem 0;
+      background: transparent;
     }
 
     .logo-full img {
-      width: min(100%, 980px);
-      max-height: 110px;
+      width: 100%;
+      max-width: 1320px;
+      max-height: 120px;
       object-fit: contain;
       display: block;
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
@@ -108,7 +108,7 @@
       display: grid;
       place-items: center;
       position: relative;
-      padding: 15rem 5vw 5rem;
+      padding: 14.5rem 5vw 5rem;
       text-align: center;
       overflow: hidden;
     }
@@ -403,29 +403,20 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 30% 30%, rgba(0,200,255,0.10), transparent 60%);
+      background: radial-gradient(circle at 30% 30%, rgba(0,200,255,0.12), transparent 60%);
       z-index: 0;
     }
 
-    /* لوجو أنظف داخل قسم Über uns */
-    .about-logo-wrap {
+    /* اللوجو مكان الزائد */
+    .about-logo {
+      width: 78%;
+      max-width: 420px;
+      opacity: 0.22;
+      object-fit: contain;
+      display: block;
       position: relative;
       z-index: 1;
-      width: 82%;
-      max-width: 430px;
-      padding: 1.4rem;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(3px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-    }
-
-    .about-logo {
-      width: 100%;
-      display: block;
-      object-fit: contain;
-      opacity: 0.88;
-      filter: grayscale(10%) contrast(1.05);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.22));
     }
 
     .about-badge {
@@ -628,11 +619,11 @@
 
     @media (max-width: 900px) {
       .logo-full {
-        min-height: 86px;
+        min-height: 96px;
       }
 
       .logo-full img {
-        max-height: 78px;
+        max-height: 96px;
       }
 
       nav ul {
@@ -641,7 +632,7 @@
       }
 
       .hero {
-        padding-top: 13.5rem;
+        padding-top: 14rem;
       }
     }
 
@@ -661,16 +652,16 @@
       }
 
       .logo-full {
-        min-height: 72px;
+        min-height: 76px;
       }
 
       .logo-full img {
-        max-height: 64px;
+        max-height: 76px;
       }
 
-      .about-logo-wrap {
-        width: 78%;
-        padding: 1rem;
+      .about-logo {
+        width: 72%;
+        opacity: 0.18;
       }
     }
   </style>
@@ -773,9 +764,7 @@
     <div class="about-wrap">
       <div class="about-visual">
         <div class="about-box">
-          <div class="about-logo-wrap">
-            <img src="logo.svg" class="about-logo" alt="MTS Logo">
-          </div>
+          <img src="logo.svg" class="about-logo" alt="MTS Logo">
         </div>
         <div class="about-badge">
           Zuverlässiger Service<br>für Medizintechnik
